@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore - Login</title>
+</head>
+<body>
+    <header>
+        <a href="catalog.html">⬅️ Catalog သို့ ပြန်သွားရန်</a>
+        <h1>🔑 အကောင့်ဝင်ရောက်ရန် (Login)</h1>
+    </header>
+
+    <main style="margin-top: 20px;">
+        <div id="error-message" style="color: red;"></div>
+
+        <form id="login-form" style="width: 300px;">
+            <div>
+                <label>အီးမေးလ် (Email): </label><br>
+                <input type="email" id="email" required style="width: 100%;">
+            </div><br>
+
+            <div>
+                <label>လျှို့ဝှက်နံပါတ် (Password): </label><br>
+                <input type="password" id="password" required style="width: 100%;">
+            </div><br>
+
+            <button type="submit" id="login-btn">Login ဝင်မည်</button>
+        </form>
+    </main>
+
+    <script type="module" src="js/pages/login.js"></script>
+</body>
+</html>

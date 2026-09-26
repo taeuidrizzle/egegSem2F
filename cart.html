@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore - Cart & Checkout</title>
+</head>
+<body>
+    <header>
+        <a href="catalog.html">⬅️ Catalog သို့ ပြန်သွားရန်</a>
+        <h1>🛒 ဝယ်ယူမည့် စာအုပ်များ (Cart)</h1>
+    </header>
+
+    <main style="margin-top: 20px;">
+        <div id="error-message" style="color: red;"></div>
+
+        <!-- 1. Cart Table Section -->
+        <section id="cart-section">
+            <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr>
+                        <th>စာအုပ်အမည်</th>
+                        <th>စျေးနှုန်း</th>
+                        <th>အရေအတွက်</th>
+                        <th>စုစုပေါင်း</th>
+                        <th>လုပ်ဆောင်ချက်</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items-body">
+                    <!-- JS မှ Dynamic ရေးမည် -->
+                </tbody>
+            </table>
+
+            <h3 style="text-align: right;">ကျသင့်ငွေ စုစုပေါင်း: <span id="cart-total">0</span> MMK</h3>
+        </section>
+
+        <hr style="margin: 30px 0;">
+
+        <!-- 2. Checkout Form Section -->
+        <section id="checkout-section">
+            <h2>📦 ပို့ဆောင်ရမည့် အချက်အလက်များနှင့် ငွေချေစနစ်</h2>
+            <form id="checkout-form">
+                <div>
+                    <label>အမည်: </label><br>
+                    <input type="text" id="customer-name" required style="width: 300px;">
+                </div><br>
+
+                <div>
+                    <label>ဖုန်းနံပါတ်: </label><br>
+                    <input type="tel" id="customer-phone" required style="width: 300px;">
+                </div><br>
+
+                <div>
+                    <label>ပို့ဆောင်ရမည့် လိပ်စာ: </label><br>
+                    <textarea id="shipping-address" required style="width: 300px; height: 80px;"></textarea>
+                </div><br>
+
+                <div>
+                    <label>Payment Slip Upload (ငွေလွှဲပြေစာ ပုံ): </label><br>
+                    <input type="file" id="payment-slip" accept="image/*" required>
+                </div><br>
+
+                <button type="submit" id="submit-order-btn">Order တင်မည်</button>
+            </form>
+        </section>
+    </main>
+
+    <script type="module" src="js/pages/cart.js"></script>
+</body>
+</html>

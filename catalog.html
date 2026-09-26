@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore - Catalog</title>
+</head>
+<body>
+    <header>
+        <h1>📚 စာအုပ်ဆိုင် (Bookstore)</h1>
+        <nav>
+            <a href="catalog.html">Catalog</a> | 
+            <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>စာအုပ်များ စာရင်း</h2>
+        <!-- Loading State -->
+        <div id="loading" style="display: none;">စာအုပ်များ ခေါ်ယူနေပါသည်...</div>
+        
+        <!-- Error State -->
+        <div id="error-message" style="color: red;"></div>
+
+        <!-- Books Grid Container -->
+        <div id="book-list" style="display: flex; flex-wrap: wrap; gap: 20px;"></div>
+    </main>
+
+    <!-- ES Module အဖြစ် ချိတ်ဆက်ခြင်း -->
+    <script type="module" src="js/pages/catalog.js"></script>
+</body>
+</html>

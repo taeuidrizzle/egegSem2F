@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore - Book Detail</title>
+</head>
+<body>
+    <header>
+        <a href="catalog.html">⬅️ Catalog သို့ ပြန်သွားရန်</a>
+        <nav style="float: right;">
+            <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <main style="margin-top: 20px;">
+        <div id="loading">စာအုပ် အချက်အလက် ခေါ်ယူနေပါသည်...</div>
+        <div id="error-message" style="color: red;"></div>
+
+        <div id="book-detail-container" style="display: none; gap: 30px;">
+            <img id="book-cover" src="" alt="" style="width: 250px; height: 350px; object-fit: cover;">
+            <div>
+                <h1 id="book-title"></h1>
+                <p><strong>ရေးသူ:</strong> <span id="book-author"></span></p>
+                <p><strong>စျေးနှုန်း:</strong> <span id="book-price"></span> MMK</p>
+                <p><strong>အသေးစိတ် ဖော်ပြချက်:</strong></p>
+                <p id="book-description"></p>
+                
+                <hr>
+                <label>အရေအတွက်: </label>
+                <input type="number" id="quantity-input" value="1" min="1" style="width: 50px;">
+                <br><br>
+                <button id="add-to-cart-detail-btn">Cart ထဲသို့ ထည့်မည်</button>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="js/pages/detail.js"></script>
+</body>
+</html>
